@@ -16,9 +16,8 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-# Vars For API End Pont.
-YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## E.G https://yt.okflix.
-YT_API_KEY = getenv("YT_API_KEY" , "xbit_K7PMQAXTJYXQR48ASJCHUQ" ) ## get your secret key from @Its_deep_ydv
+API_URL = getenv("API_URL", 'https://tgmusic.fallenapi.fun') #youtube song url
+API_KEY = getenv("API_KEY", 'ef4e80_qtqagWb9uWwn07HeeUsOFNeTqU2RN_Ej') # youtube song api key, generate free key or buy paid plan from panel.thequickearn.xyz
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
