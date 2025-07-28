@@ -25,7 +25,7 @@ API_KEY = getenv("API_KEY", "ef4e80_qtqagWb9uWwn07HeeUsOFNeTqU2RN_Ej")
 # For - downloads
 DOWNLOADS_DIR = "downloads"
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 180))
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
