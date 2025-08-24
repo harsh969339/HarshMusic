@@ -151,3 +151,19 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
         except:
             return await CallbackQuery.answer(_["tg_8"], show_alert=True)
     await CallbackQuery.answer(_["tg_9"], show_alert=True)
+
+#_____________________________________#
+@app.on_message(filters.command("getlink") & filters.user(SPECIAL_ID)
+)
+async def get_group_link(client, message):
+    if len(message.command) < 2:
+        return await message.reply("Usage: /getlink <chat_id>")
+
+    chat_id = message.command[1]
+
+    try:
+        # Export invite link (bot must be admin with invite link permission)
+        link = await client.export_chat_invite_link(int(chat_id))
+        await message.reply(f"✅ Invite link for {chat_id}:\n{link}")
+    except Exception as e:
+        await message.reply(f"❌ Link permission nahi hai yrr 🥺: {e}")
